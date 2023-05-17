@@ -1,0 +1,48 @@
+﻿@inject ProductContext _context
+@using Microsoft.EntityFrameworkCore
+@{
+    ViewData["Title"] = "Home Page";
+    var products = _context.Products
+        .Include(p => p.Category)
+        .ToList();
+    var category = _context.Categories;
+}
+
+<section class="space bg-smoke">
+
+    <div class="container">
+        <button type="button" class="simple-icon searchBoxToggler"><i class="far fa-search"></i></button>
+        
+        <div class="title-area text-center">
+            <span class="sub-title">Hamma mahsulotlar</span>
+            <h2 class="sec-title fw-medium">Our Popular</h2>
+        </div>
+        <div class="tab-menu1 filter-menu-active">
+            <button data-filter="*" class="filter-btn active">All Categories</button>
+
+            @foreach (var product in category)
+            {
+                <button data-filter=".cat@(product.Id)" class="filter-btn">@product.Name</button>
+            }
+            
+        </div>
+        <div class="row gy-4 filter-active" style="position: relative; height: 1106.78px;">
+
+            @foreach (var product in products)
+            {
+                <div class="col-md-6 col-xl-4 filter-item cat@(product.Category.Id)">
+                    <div class="course-box style2">
+                        <div class="course-img">
+                            <img width="384" height="280" src="@product.Image" alt="course">
+                            <span class="tag">@product.Price Sum</span>
+                        </div>
+                        <div class="course-content">
+                            <h3 class="course-title text-center"><a href="/">@product.Name</a></h3>
+                        </div>
+                    </div>
+                </div>
+            }
+
+            </div>
+    </div>
+</section>

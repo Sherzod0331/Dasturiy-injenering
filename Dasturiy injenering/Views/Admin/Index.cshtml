@@ -1,0 +1,118 @@
+﻿@page "/Admin"
+
+<div class="as-cart-wrapper  space-top space-extra-bottom">
+    <div class="container">
+        <div class="woocommerce-notices-wrapper">
+            <div class="woocommerce-message">Shipping costs updated.</div>
+        </div>
+        <form action="#" class="woocommerce-cart-form">
+            <table class="cart_table">
+                <thead>
+                    <tr>
+                        <th class="cart-col-image">Image</th>
+                        <th class="cart-col-productname">Product Name</th>
+                        <th class="cart-col-price">Price</th>
+                        <th class="cart-col-edit">Edit</th>
+                        <th class="cart-col-remove">Remove</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td colspan="6" class="actions">
+                            <div class="as-cart-coupon">
+                                <input type="text" class="form-control" placeholder="Name...">
+                                <button type="submit" class="as-btn">Search</button>
+                            </div>
+                            <button type="submit" class="as-btn">Add cart</button>
+                        </td>
+                    </tr>
+                    <tr class="cart_item">
+                        <td data-title="Product">
+                            <a class="cart-productimage" href="assets/img/cart/cart_1_1.jpg"><img width="91" height="91" src="assets/img/cart/cart_1_1.jpg" alt="Image"></a>
+                        </td>
+                        <td data-title="Name">
+                            <a class="cart-productname" href="shop-detailis.html">HTML5 Course</a>
+                        </td>
+                        <td data-title="Price">
+                            <span class="amount"><bdi><span>$</span>18</bdi></span>
+                        </td>
+                        <td data-title="Edit">
+                            <a href="#" class="remove" data-bs-toggle="modal" data-bs-target="#staticBackdrop"><i class="fa-light fa-pen"></i></a>
+                        </td>
+                        <td data-title="Remove">
+                            <a href="#" class="remove"><i class="fal fa-trash-alt"></i></a>
+                        </td>
+                    </tr>
+                    <tr class="cart_item">
+                        <td data-title="Product">
+                            <a class="cart-productimage" href="shop-detailis.html"><img width="91" height="91" src="assets/img/cart/cart_1_2.jpg" alt="Image"></a>
+                        </td>
+                        <td data-title="Name">
+                            <a class="cart-productname" href="shop-detailis.html">Javascript</a>
+                        </td>
+                        <td data-title="Price">
+                            <span class="amount"><bdi><span>$</span>18</bdi></span>
+                        </td>
+                        <td data-title="Edit">
+                            <a href="#" class="remove" data-bs-toggle="modal" data-bs-target="#staticBackdrop"><i class="fa-light fa-pen"></i></a>
+                        </td>
+                        <td data-title="Remove">
+                            <a href="#" class="remove"><i class="fal fa-trash-alt"></i></a>
+                        </td>
+                    </tr>
+                    <tr class="cart_item">
+                        <td data-title="Product">
+                            <a class="cart-productimage" href="shop-detailis.html"><img width="91" height="91" src="assets/img/cart/cart_1_3.jpg" alt="Image"></a>
+                        </td>
+                        <td data-title="Name">
+                            <a class="cart-productname" href="shop-detailis.html">Web Development</a>
+                        </td>
+                        <td data-title="Price">
+                            <span class="amount"><bdi><span>$</span>18</bdi></span>
+                        </td>
+                        <td data-title="Edit">
+                            <a href="#" class="remove" data-bs-toggle="modal" data-bs-target="#staticBackdrop"><i class="fa-light fa-pen"></i></a>
+                        </td>
+                        <td data-title="Remove">
+                            <a href="#" class="remove"><i class="fal fa-trash-alt"></i></a>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </form>
+    </div>
+</div>
+
+<!-- Modal -->
+<div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="staticBackdropLabel">Modal mahsulot</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <form>
+                    <div class="form-group">
+                        <label for="exampleFormControlFile1">Image</label>
+                        <input type="file" class="form-control-file" id="exampleFormControlFile1">
+                    </div>
+                    <div class="form-group">
+                        <label for="exampleFormControlFile1">Name</label>
+                        <!--<input type="text" readonly class="form-control-plaintext" id="staticEmail" value="Name">-->
+                        <input type="text" class="form-control" id="formGroupExampleInput" value="Name">
+                    </div>
+                    <div class="form-group">
+                        <label for="exampleFormControlFile1">Price</label>
+                        <input type="text" class="form-control" placeholder="Price">
+                    </div>
+                </form>
+
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary">Understood</button>
+            </div>
+        </div>
+    </div>
+</div>
